@@ -1,0 +1,6 @@
+[submodule "src/submodules/backendrefresher-user-service"]
+	path = src/submodules/backendrefresher-user-service
+	url = https://github.com/19Asif30/backendrefresher-user-service.git
+[submodule "src/submodules/backend-refresher-1.0-entities"]
+	path = src/submodules/backend-refresher-1.0-entities
+	url = https://github.com/19Asif30/backend-refresher-1.0-entities.git
