@@ -4,3 +4,6 @@
 [submodule "src/submodules/backendrefresher-1.0-dtos"]
 	path = src/submodules/backendrefresher-1.0-dtos
 	url = https://github.com/19Asif30/backendrefresher-1.0-dtos.git
+[submodule "src/submodules/backend-refresher-1.0-rmq"]
+	path = src/submodules/backend-refresher-1.0-rmq
+	url = https://github.com/19Asif30/backend-refresher-1.0-rmq.git
