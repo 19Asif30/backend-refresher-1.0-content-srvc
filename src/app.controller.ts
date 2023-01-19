@@ -2,7 +2,7 @@ import { Body, Controller, Delete, Get, Param, Post, Put } from '@nestjs/common'
 import { AppService } from './app.service';
 import { ContentDto } from './submodules/backendrefresher-1.0-dtos/src/dtos/content.dto';
 
-@Controller()
+@Controller('content')
 export class AppController {
   constructor(private readonly appService: AppService) { }
 

@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import { Module } from '@nestjs/common';
 import { ClientsModule, Transport } from '@nestjs/microservices';
 import { TypeOrmModule } from '@nestjs/typeorm';
@@ -5,6 +6,8 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ContentModule } from './modules/content/content.module';
 import { Content } from './submodules/backend-refresher-1.0-entities/src/entities/content.entity';
+import { Option } from './submodules/backend-refresher-1.0-entities/src/entities/option.entity';
+import { Reaction } from './submodules/backend-refresher-1.0-entities/src/entities/reaction.entity';
 import { User } from './submodules/backend-refresher-1.0-entities/src/entities/user.entity';
 import { queues } from './submodules/backend-refresher-1.0-rmq/src/constants/rmqQueues';
 import { MsgBrokerOpsService } from './submodules/backend-refresher-1.0-rmq/src/module/msg-broker-ops/msg-broker-ops.service';
@@ -18,11 +21,11 @@ import { MsgBrokerOpsService } from './submodules/backend-refresher-1.0-rmq/src/
       username: 'postgres',
       password: '19asifani30',
       database: 'backend-social-media',
-      entities: [User, Content],
+      entities: [User, Content, Reaction, Option],
       synchronize: true,
       logging: false
     }),
-    TypeOrmModule.forFeature([User, Content]),
+    TypeOrmModule.forFeature([User, Content, Reaction, Option]),
     ClientsModule.register([
       {
         name: 'CONTENT_SERVICE_QUEUE',

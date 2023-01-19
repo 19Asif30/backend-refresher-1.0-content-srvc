@@ -1,3 +1,5 @@
+/* eslint-disable prefer-const */
+/* eslint-disable prettier/prettier */
 import { Controller } from "@nestjs/common";
 import { EventPattern } from "@nestjs/microservices";
 import { RMQPayloadDto } from "src/submodules/backend-refresher-1.0-rmq/src/dtos/rmqPayload.dto";

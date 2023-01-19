@@ -1,3 +1,5 @@
+/* eslint-disable prefer-const */
+/* eslint-disable prettier/prettier */
 import { Injectable } from '@nestjs/common';
 import { InjectRepository } from '@nestjs/typeorm';
 import { ContentDto } from 'src/submodules/backendrefresher-1.0-dtos/src/dtos/content.dto';
@@ -46,7 +48,6 @@ export class ContentService {
 
         try {
             let updatedResult = await this.contentRepository.update(Content.id, Content);
-
             return updatedResult;
         }
         catch (err) {
@@ -57,15 +58,13 @@ export class ContentService {
     }
 
 
-
-
-    async deleteContent(ContentId: number) {
-        try {
-            let deletedContent = await this.contentRepository.delete(ContentId);
-            return deletedContent;
-        }
-        catch (err) {
-            throw err
-        }
-    }
+    // async deleteContent(ContentId: number) {
+    //     try {
+    //         let deletedContent = await this.contentRepository.delete(ContentId);
+    //         return deletedContent;
+    //     }
+    //     catch (err) {
+    //         throw err
+    //     }
+    // }
 }
